@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Blogly Home</title>
+    <link rel="stylesheet" href="/static/styles.css">
+</head>
+<body>
+    <h1>Blogly</h1>
+    <h2>Edit a user</h2>
+    <form action="/users/{{user.id}}/edit" method="POST">
+        <p>First Name <input name="first-name" value="{{user.first_name}}"></p>
+        <p>Last Name <input name="last-name" value="{{user.last_name}}"></p>
+        <p>Image URL <input name="image-url" value="{{user.image_url}}"></p>
+        <a href="/users/{{user.id}}" class="button-link">Cancel</a>
+        <button>Save</button>
+    </form>
+</body>
+</html>

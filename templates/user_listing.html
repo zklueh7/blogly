@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>User Listing</title>
+    <link rel="stylesheet" href="/static/styles.css">
+</head>
+<body>
+    <h1>Blogly</h1>
+    <h2>User Listing</h2>
+    <div id="user-listing">
+    {% for user in users %}
+    <li><a href="/users/{{user.id}}">{{user.first_name}} {{user.last_name}}</a></li>
+    {% endfor %}
+    </div>
+    <a href="/users/new" class="button-link">Add user</a>
+</body>
+</html>

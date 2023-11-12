@@ -1,0 +1,35 @@
+body {
+    font-family: sans-serif;
+}
+
+form input {
+    display: block;
+    width: 200px;
+    height: 20px;
+}
+
+form button {
+    background-color: #39c32d;
+    border-color: #39c32d;
+    color: white;
+    padding: 4px 8px 4px 8px;
+    border-radius: 5px;
+}
+
+.button-link {
+    padding: 5px;
+    border-radius: 5px;
+    text-decoration: none;
+    color: black;
+    background-color: grey;
+}
+
+#user-listing {
+    margin-bottom: 25px;
+}
+
+img {
+    height: 25%;
+    width: 25%;
+    display: inline;
+}
