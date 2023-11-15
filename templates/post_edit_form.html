@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Post Edit Form</title>
+    <link rel="stylesheet" href="/static/styles.css">
+</head>
+<body>
+    <h1>Blogly</h1>
+    <h2>Edit Post</h2>
+    <form action="/posts/{{post.id}}/edit" method="POST">
+        <p>Title <input name="title" value="{{post.title}}"></p>
+        <p>Content <input name="content" value="{{post.content}}"></p>
+        <a href="/posts/{{post.id}}" class="button-link">Cancel</a>
+        <button>Edit</button>
+    </form>
+</body>
+</html>

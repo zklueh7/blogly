@@ -28,8 +28,13 @@ form button {
     margin-bottom: 25px;
 }
 
-img {
+#user-image {
     height: 25%;
     width: 25%;
-    display: inline;
+    position: absolute;
+}
+
+#user-detail-text {
+    position: relative;
+    margin-left: 28%;
 }

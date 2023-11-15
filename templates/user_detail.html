@@ -8,13 +8,23 @@
 </head>
 <body>
     <h1>Blogly User</h1>
-    <h2>{{user.first_name}} {{user.last_name}}</h2>
-    <img src="{{user.image_url}}">
-    
-    <form action="/users/{{user.id}}/delete" method="POST">
-        <a href="/users/{{user.id}}/edit" class="button-link">Edit</a>
-        <button>Delete</button>
-    </form>
+    <img id="user-image" src="{{user.image_url}}">
 
+    <section id="user-detail-text">
+        <h2>{{user.first_name}} {{user.last_name}}</h2>
+        
+        <form action="/users/{{user.id}}/delete" method="POST">
+            <a href="/users/{{user.id}}/edit" class="button-link">Edit</a>
+            <button>Delete</button>
+        </form>
+
+        <h3>Posts</h3>
+        {% for post in user.posts %}
+        <ul>
+            <li><a href="/posts/{{post.id}}">{{post.title}}</a></li>
+        </ul>
+        {% endfor %}
+        <a href="/users/{{user.id}}/posts/new" class="button-link">Add post</a>
+    </section>  
 </body>
 </html>
