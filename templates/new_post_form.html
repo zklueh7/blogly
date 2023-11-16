@@ -11,6 +11,9 @@
     <form action="/users/{{user.id}}/posts/new" method="POST">
         <p>Title <input name="title"></p>
         <p>Content <input name="content"></p>
+        {% for tag in tags %}
+        {{tag.name}} <input type="checkbox" name="tags" value="{{tag.id}}">
+        {% endfor %}
         <a href="/users/{{user.id}}" class="button-link">Cancel</a>
         <button>Add</button>
     </form>
